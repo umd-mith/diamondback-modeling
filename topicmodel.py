@@ -12,14 +12,10 @@ from glob import iglob
 from gensim import corpora, models
 
 def articles():
-    i = 0
     for filename in iglob("extractedArticles/**/*.txt", recursive=True):
         w = words(filename)
         if 'freedom' in w:
             yield w
-            if i > 100:
-                break
-            i += 1
 
 def words(filename):
     text = codecs.open(filename, 'r', 'utf8').read().lower()
