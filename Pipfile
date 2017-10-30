@@ -4,7 +4,15 @@ verify_ssl = true
 name = "pypi"
 
 [packages]
+
 gensim = "*"
+nltk = "*"
+tabulate = "*"
+
+
+
+
+
 
 
 
